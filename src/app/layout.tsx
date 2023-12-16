@@ -1,9 +1,15 @@
 import { Metadata } from 'next';
-import * as React from 'react';
+import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 
 import { siteConfig } from '@/constant/config';
+
+const inter = Inter({
+  subsets: ['cyrillic'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,38 +25,16 @@ export const metadata: Metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
   manifest: `/favicon/site.webmanifest`,
-  openGraph: {
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: siteConfig.title,
-    images: [`${siteConfig.url}/images/og.jpg`],
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
-  },
-  // authors: [
-  //   {
-  //     name: 'Theodorus Clarence',
-  //     url: 'https://theodorusclarence.com',
-  //   },
-  // ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html>
-      <body>{children}</body>
+    <html lang='uk' className={inter.className}>
+      <body>
+        <main>{children}</main>
+      </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
