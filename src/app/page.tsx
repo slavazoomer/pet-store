@@ -1,10 +1,4 @@
-'use client';
-
 import Head from 'next/head';
-
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
 
 import Logo from '~/svg/Logo.svg';
 
@@ -22,21 +16,9 @@ export default function HomePage() {
             A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
             Import, Seo, Link component, pre-configured with Husky{' '}
           </p>
-          <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
-            </ArrowLink>
-          </p>
-
-          <ButtonLink className='mt-6' href='/components' variant='light'>
-            See all components
-          </ButtonLink>
 
           <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
+            © {new Date().getFullYear()}
           </footer>
         </div>
       </section>
