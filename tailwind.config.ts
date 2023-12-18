@@ -6,7 +6,7 @@ export default {
     extend: {
       fontFamily: {
         Inter: ['Inter'],
-        Stapel: ['Stapel'],
+        Stapel: ['var(--font-stapel)'],
       },
       colors: {
         customOrange: '#FF9100',

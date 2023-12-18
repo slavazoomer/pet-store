@@ -1,10 +1,18 @@
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
 import '@/styles/globals.scss';
 
+import { cn } from '@/lib/utils';
+
 import { siteConfig } from '@/constant/config';
+
+const stapel = localFont({
+  src: './fonts/Stapel-SemiExpandedMedium.woff2',
+  variable: '--font-stapel',
+});
 
 const inter = Inter({
   subsets: ['cyrillic'],
@@ -29,7 +37,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html lang='uk' className={inter.className}>
+    <html lang='uk' className={cn(inter.className, stapel.variable)}>
       <body>
         <main>{children}</main>
       </body>
