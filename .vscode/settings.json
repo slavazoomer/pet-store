@@ -12,5 +12,8 @@
     "classNames",
     "containerClassName"
   ],
+  "files.associations": {
+    "*.scss": "tailwindcss"
+  },
   "typescript.preferences.importModuleSpecifier": "non-relative"
 }
