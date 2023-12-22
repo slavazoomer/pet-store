@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 type SkeletonProps = ComponentPropsWithoutRef<'div'>;
 
-export default function Skeleton({ className, ...rest }: SkeletonProps) {
+const Skeleton = ({ className, ...rest }: SkeletonProps) => {
   return (
     <div
       className={cn('animate-shimmer bg-[#f6f7f8]', className)}
@@ -17,4 +17,6 @@ export default function Skeleton({ className, ...rest }: SkeletonProps) {
       {...rest}
     />
   );
-}
+};
+
+export default Skeleton;
