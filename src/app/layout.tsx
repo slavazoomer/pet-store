@@ -8,6 +8,7 @@ import '@/styles/globals.scss';
 import { cn } from '@/lib/utils';
 
 import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
 
 import { siteConfig } from '@/constant/config';
 
@@ -41,6 +42,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang='uk' className={cn(inter.className, stapel.variable, 'h-full')}>
       <body className='flex h-full flex-col'>
+        <Header/>
         <main className='flex-1'>{children}</main>
         <Footer />
       </body>
