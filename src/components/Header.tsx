@@ -6,7 +6,7 @@ import { TbGridDots } from 'react-icons/tb';
 
 export const Header = () => {
   return (
-    <header className='max-w-screen-desktop font-Inter sticky top-0 flex h-20 w-full items-center text-sm font-medium'>
+    <header className='max-w-screen-desktop font-Inter bg-customWhite sticky top-0 flex h-20 w-full items-center text-sm font-medium'>
       <Link href='/' className='text-customOrange mr-16 text-3xl font-medium'>
         LOGO
       </Link>

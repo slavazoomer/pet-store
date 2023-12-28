@@ -43,7 +43,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang='uk' className={cn(inter.className, stapel.variable)}>
       <body className='flex h-full min-h-screen flex-col items-center'>
         <Header />
-        <main className='flex-1'>{children}</main>
+        <main className='flex w-full flex-1 flex-col items-center'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
