@@ -40,9 +40,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html lang='uk' className={cn(inter.className, stapel.variable, 'h-full')}>
-      <body className='flex h-full flex-col'>
-        <Header/>
+    <html lang='uk' className={cn(inter.className, stapel.variable)}>
+      <body className='flex h-full min-h-screen flex-col items-center'>
+        <Header />
         <main className='flex-1'>{children}</main>
         <Footer />
       </body>
