@@ -18,7 +18,7 @@ export default {
         customBlack: '#040404',
       },
       screens: {
-        desktop: '1440px',
+        desktop: '1120px',
       },
       keyframes: {
         flicker: {
